@@ -87,7 +87,7 @@ namespace SecurityGuard.Controllers
             return View(model);
         }
 
-        [HttpGet]
+        [AcceptVerbs(HttpVerbs.Get | HttpVerbs.Post)]
         public virtual ActionResult LogOff()
         {
             authenticationService.LogOff();
